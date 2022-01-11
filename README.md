@@ -1,3 +1,7 @@
+# Simple React app template.
+
+Use this as an starting template for your React app. It has a simple nav, routing and a temp context set up already for you.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
