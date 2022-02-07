@@ -8,6 +8,7 @@ nav{
 }
 
 .desktop_nav{
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
