@@ -1,32 +1,18 @@
-nav{
+nav {
   background-color: #333;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
+  width: 100%;
+  padding: 0rem 2rem;
 }
 
-.desktop_nav{
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-  width: 100%;
-  padding: 0rem 1rem;
+nav a {
+
 }
-nav a{
-  color: #eee;
-  text-decoration: none;
-  height: 100%;
-  padding: 0rem 1.5rem;
-  display: flex;
-  align-items: center;
-}
-nav a:hover{
+
+nav a:hover {
   background-color: rgba(238, 238, 238, 0.3);
 }
-nav a:first-of-type{
+
+nav a:first-of-type {
   margin: 0rem auto 0rem 0rem;
 }

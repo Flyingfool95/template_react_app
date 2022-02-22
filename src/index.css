@@ -1,17 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+
+:root {
+  /* Fonts */
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Hind Siliguri', sans-serif;
+  ;
+
+  /* Colors */
+  --color-primary: rgb(42, 211, 146);
+  --color-secondary: rgb(115, 83, 141);
+  --color-text-dark: #222;
+  --color-text-light: #eee;
+
+  /* Widths */
+  --width-site-max: 1080px;
+  --width-text-max: 60ch;
+
+  /* Paddings & margins */
+  --padding-site: 2rem;
+
+  --padding-normal: 1rem;
+  --padding-large: 3rem;
+  --margin-normal: 1rem;
+  --margin-large: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  letter-spacing: 0.33px;
+  font-weight: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin: 0.5rem 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
-.page_container{
-  padding: 0rem 1rem;
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+.page_container {
+  padding: var(--padding-site);
+  max-width: var(--width-site-max);
+  margin: auto;
 }

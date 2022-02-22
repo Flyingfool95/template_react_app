@@ -16,13 +16,11 @@ export default function Nav() {
 
   return (
     <nav>
-      <div className="desktop_nav">
         {nav_elements.map(link => (
           <NavLink key={link.name} to={link.to}>
             {link.name}
           </NavLink>
         ))}
-      </div>
     </nav>
   )
 }
