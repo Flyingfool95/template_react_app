@@ -1,7 +1,11 @@
 import { NavLink } from "react-router-dom"
+import { useIsMobile } from "../../contexts/IsMobileContext"
+
+//CSS import
 import './Nav.css'
 
 export default function Nav() {
+  const { isMobile } = useIsMobile()
 
   const nav_elements = [
     {
@@ -17,11 +21,14 @@ export default function Nav() {
   return (
     <nav>
       <div className="nav_links">
-        {nav_elements.map(link => (
+        {!isMobile && nav_elements.map(link => (
           <NavLink key={link.name} to={link.to}>
             {link.name}
           </NavLink>
         ))}
+        {isMobile && 
+        
+        }
       </div>
     </nav>
   )
