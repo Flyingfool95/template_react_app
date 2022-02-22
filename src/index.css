@@ -19,12 +19,24 @@
   --width-text-max: 60ch;
 
   /* Paddings & margins */
-  --padding-site: 2rem;
+  --padding-site: 1rem;
 
   --padding-normal: 1rem;
-  --padding-large: 3rem;
+  --padding-large: 1.5rem;
   --margin-normal: 1rem;
-  --margin-large: 3rem;
+  --margin-large: 1.5rem;
+}
+
+@media (min-width: 540px) {
+  :root {
+    /* Paddings & margins */
+    --padding-site: 2rem;
+  
+    --padding-normal: 1rem;
+    --padding-large: 3rem;
+    --margin-normal: 1rem;
+    --margin-large: 3rem;
+  }
 }
 
 * {
@@ -39,6 +51,12 @@ body {
 
   letter-spacing: 0.33px;
   font-weight: 400;
+}
+
+p, span, a {
+  font-size: 20px;
+  text-decoration: none;
+  max-width: var(--width-text-max);
 }
 
 h1, h2, h3, h4, h5, h6 {
