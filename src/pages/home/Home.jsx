@@ -1,8 +1,5 @@
-import { useIsMobile } from "../../contexts/IsMobileContext"
-
 
 export default function Home() {
-  const { isMobile } = useIsMobile()
   return (
     <div>
       <h1>Home</h1>

@@ -1,11 +1,15 @@
-import { NavLink } from "react-router-dom"
-import { useIsMobile } from "../../contexts/IsMobileContext"
-
 //CSS import
 import './Nav.css'
+//Components
+import { NavLink } from "react-router-dom"
+import { useIsMobile } from "../../contexts/IsMobileContext"
+import { useEffect, useState } from "react";
+import { HiMenu, HiOutlineX } from "react-icons/hi";
+
 
 export default function Nav() {
   const { isMobile } = useIsMobile()
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const nav_elements = [
     {
@@ -26,8 +30,29 @@ export default function Nav() {
             {link.name}
           </NavLink>
         ))}
-        {isMobile && 
-        
+        {isMobile &&
+          <>
+            {!menuOpen &&
+              <div className="hamburger" onClick={() => setMenuOpen(true)}>
+                <HiMenu style={{ width: "100%", height: "100%", color: "var(--color-text-light)" }} />
+              </div>
+            }
+            {menuOpen &&
+              <>
+                <div className="hamburger" onClick={() => setMenuOpen(false)}>
+                  <HiOutlineX style={{ width: "100%", height: "100%", color: "var(--color-text-light)" }} />
+                </div>
+                <div className='mobile_menu'>
+                  {nav_elements.map(link => (
+                    <NavLink key={link.name} to={link.to} onClick={() => setMenuOpen(false)}>
+                      {link.name}
+                    </NavLink>
+                  ))}
+                </div>
+              </>
+            }
+
+          </>
         }
       </div>
     </nav>
