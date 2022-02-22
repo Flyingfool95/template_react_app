@@ -3,7 +3,7 @@ import './Nav.css'
 //Components
 import { NavLink } from "react-router-dom"
 import { useIsMobile } from "../../contexts/IsMobileContext"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
 
 
